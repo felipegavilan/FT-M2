@@ -163,7 +163,6 @@ p {
 nav {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   background-color: #F6F6F6;
   border: #F1F1F1 solid 2px;

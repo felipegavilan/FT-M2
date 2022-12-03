@@ -1,7 +1,6 @@
 {
   "name": "12-react-redux",
   "version": "1.0.0",
-  "type": "module",
   "dependencies": {
     "@babel/core": "^7.18.6",
     "@babel/preset-env": "^7.18.6",
@@ -19,11 +18,12 @@
     "node-fetch": "^2.6.7",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-redux": "^8.0.2",
+    "react-redux": "^8.0.5",
     "react-router-dom": "^6.3.0",
-    "react-scripts": "^4.0.3",
+    "react-scripts": "^5.0.1",
     "redux": "^4.2.0",
-    "redux-thunk": "^2.4.1",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-thunk": "^2.4.2",
     "styled-components": "^5.3.5"
   },
   "scripts": {
@@ -72,7 +72,8 @@
     "moduleNameMapper": {
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
       "\\.(css|less)$": "identity-obj-proxy"
-    }
+    },
+    "testEnvironment": "jsdom"
   },
   "babel": {
     "presets": [
