@@ -1,26 +1,30 @@
-const { ADD_PRODUCT, DELETE_PRODUCT } = require('../actions/types');
+import { ADD_PRODUCT, DELETE_PRODUCT, GET_STORE_NAME } from '../actions/types'
 
 const initialState = {
-  list: [],
-  
-}
+   list: [],
+   storeName:"",
+};
 
-function rootReducer(state = initialState, {type, payload}){
-    switch(type){
+const rootReducer = (state = initialState, {type, payload}) => {
+    switch (type){
         case ADD_PRODUCT:
             return{
-                ...state,
-                   list: [...state.list, payload],
-                  }
+               list: [...state.list, payload]
+
+            }
         case DELETE_PRODUCT:
-            const arr = state.list.filter(char => char.id !== payload)
+            const filtered = state.list.filter(d=> d.id !== payload)
+            return{
+                list : filtered,
+            }
+        case GET_STORE_NAME:
             return{
                 ...state,
-                list: arr,
+                storeName: payload,
             }
         default:
-            return state;
+            return {...state}
     }
-}
+};
 
-export default rootReducer
+export default rootReducer;
